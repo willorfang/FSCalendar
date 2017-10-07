@@ -30,7 +30,7 @@
     self = [super init];
     if (self) {
         
-        _titleFont = [UIFont systemFontOfSize:FSCalendarStandardTitleTextSize];
+        _titleFont = [UIFont boldSystemFontOfSize:17];
         _subtitleFont = [UIFont systemFontOfSize:FSCalendarStandardSubtitleTextSize];
         _weekdayFont = [UIFont systemFontOfSize:FSCalendarStandardWeekdayTextSize];
         _headerTitleFont = [UIFont systemFontOfSize:FSCalendarStandardHeaderTextSize];
@@ -42,16 +42,16 @@
         _caseOptions = FSCalendarCaseOptionsHeaderUsesDefaultCase|FSCalendarCaseOptionsWeekdayUsesDefaultCase;
         
         _backgroundColors = [NSMutableDictionary dictionaryWithCapacity:5];
-        _backgroundColors[@(FSCalendarCellStateNormal)]      = [UIColor clearColor];
+        _backgroundColors[@(FSCalendarCellStateNormal)]      = [UIColor grayColor];
         _backgroundColors[@(FSCalendarCellStateSelected)]    = FSCalendarStandardSelectionColor;
         _backgroundColors[@(FSCalendarCellStateDisabled)]    = [UIColor clearColor];
         _backgroundColors[@(FSCalendarCellStatePlaceholder)] = [UIColor clearColor];
         _backgroundColors[@(FSCalendarCellStateToday)]       = FSCalendarStandardTodayColor;
         
         _titleColors = [NSMutableDictionary dictionaryWithCapacity:5];
-        _titleColors[@(FSCalendarCellStateNormal)]      = [UIColor blackColor];
+        _titleColors[@(FSCalendarCellStateNormal)]      = [UIColor whiteColor];
         _titleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];
-        _titleColors[@(FSCalendarCellStateDisabled)]    = [UIColor grayColor];
+        _titleColors[@(FSCalendarCellStateDisabled)]    = [UIColor lightGrayColor];
         _titleColors[@(FSCalendarCellStatePlaceholder)] = [UIColor lightGrayColor];
         _titleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];
         
